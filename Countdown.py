@@ -6,7 +6,6 @@
 
 # **** Gameplay ****
 # Two Letter Rounds, Two Numbers Rounds, One final Conundrum
-# I believe it's L, N, L, N, C
 
 # Ask if player wants to play a full round, just numbers or just Letters
 
@@ -15,7 +14,8 @@ if (full):
     score =+ numbers()
     score =+ letters()
     score =+ numbers()
-    score =+ conundrum()
+    # score =+ conundrum()
+
     # Display their final score
 
 if (numbers):
@@ -44,13 +44,20 @@ score = 0
 
 
 # Generate a random number between 100 & 1000 and display it to the user
-
+goal_num = random(100,1000)
 
 # Start a 30 second timer
 
 
 # Ask user what number they got & determine their score
-
+# If playing against another player the closest would get the points
+# This is just a custom adaptation to make this enjoyable
+player_num = 0 #ask player
+if (player_num = goal_num):
+    return 10
+if (player_num < goal_num and player_num > (goal_num * .9)):
+    return 5
+return 0
 
 # Have user show how they got there one line at a time
 # This is a future add. It will need structure or validation
